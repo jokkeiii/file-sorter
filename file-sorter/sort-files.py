@@ -17,6 +17,11 @@ misc_dir = 'C:/Users/zucc/Downloads/miscellaneous'
 
 # Loop through the files in the directory
 for file in os.listdir(dir_path):
+
+    # Skip directories
+    if os.path.isdir(os.path.join(dir_path, file)):
+        continue
+
     # Get the file extension
     extension = file.split('.')[-1]
 
